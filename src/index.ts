@@ -6,7 +6,7 @@ const now = new Date();
 console.log(`checkMusicData Start ${now.toLocaleString()}`);
 
 // 매일 15시에 실행
-cron.schedule("20 21 * * *", async () => {
+cron.schedule("0 15 * * *", async () => {
   const result = await checkAllMusicData();
 
   // 이상 있는 데이터 있을 경우 email 보내기

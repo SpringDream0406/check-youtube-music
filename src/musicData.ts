@@ -34,7 +34,7 @@ enum pl {
 // 유튜브 음악 데이터
 export const musicData: IMusicData[] = [
   {
-    url: "https://www.youtube.com/watch?v=dYIT_jeUBK",
+    url: "https://www.youtube.com/watch?v=dYIT_jeUBKg",
     artist: "프리스타일",
     title: "Y",
     playlists: [pl.Cyworld],
