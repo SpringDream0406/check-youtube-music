@@ -2,6 +2,9 @@ import cron from "node-cron";
 import { checkAllMusicData } from "./checkYoutubeVideosStatus";
 import { sendErrorEmail } from "./sendEmail";
 
+const now = new Date();
+console.log(`checkMusicData Start ${now.toLocaleString()}`);
+
 // 매일 15시에 실행
 cron.schedule("0 15 * * *", async () => {
   const result = await checkAllMusicData();
