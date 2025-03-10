@@ -1,6 +1,6 @@
 import nodemailer from "nodemailer";
 import "dotenv/config";
-import { IMusicData } from "./inerface";
+import { IMusicData } from "./interface/main.interface";
 
 // 발신 설정
 const transporter = nodemailer.createTransport({

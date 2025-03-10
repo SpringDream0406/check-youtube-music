@@ -1,4 +1,5 @@
-import { IMusicData, ITags } from "./inerface";
+import { ITags } from "../interface/main.interface";
+import { IMusicData } from "../interface/music.interface";
 
 // 플레이리스트, leftNavPage
 export const playlists: ITags = {
@@ -32,6 +33,7 @@ enum pl {
 }
 
 // 유튜브 음악 데이터
+// 피처링은 title에  (feat. Daniel Caesar & Giveon)  이런 식으로
 export const musicData: IMusicData[] = [
   {
     url: "https://www.youtube.com/watch?v=dYIT_jeUBKg",
@@ -45,6 +47,7 @@ export const musicData: IMusicData[] = [
   //   title: "",
   //   playlists: [pl.Pick2025],
   // },
+
   {
     url: "https://youtu.be/DC4YrpTc_0M?si=hQAjQFWmwI3k4GF9",
     artist: "ONEWE",

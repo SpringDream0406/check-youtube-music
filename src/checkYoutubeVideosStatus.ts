@@ -1,6 +1,6 @@
 import axios from "axios";
 import "dotenv/config";
-import { IMusicData } from "./inerface";
+import { IMusicData } from "./interface/main.interface";
 import { extractVideoId } from "./extractVideoId";
 import { musicData } from "./musicData";
 
