@@ -1,8 +1,8 @@
 import axios from "axios";
 import "dotenv/config";
-import { IMusicData } from "./interface/main.interface";
 import { extractVideoId } from "./extractVideoId";
-import { musicData } from "./musicData";
+import { IMusicData } from "./interface/music.interface";
+import { musicData } from "./data/musicData";
 
 const API_KEY = process.env.API_KEY;
 const youtubeURL = "https://www.googleapis.com/youtube/v3/videos";
