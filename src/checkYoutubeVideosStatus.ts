@@ -25,9 +25,19 @@ async function checkYoutubeVideoStatus(music: IMusicData) {
       },
     });
 
-    if (response.data.items.length === 0) {
+    const video = response.data?.items?.[0];
+    if (!video) {
       return { ...music, valid: "유효하지 않음" };
     }
+
+    // privacyStatus 확인
+    if (video.status.privacyStatus !== "public") {
+      return {
+        ...music,
+        valid: `비공개 또는 미등록 상태 (${video.status.privacyStatus})`,
+      };
+    }
+
     return null; // 이상 없으면 null 반환
   } catch (error) {
     return { ...music, valid: "Error" };
