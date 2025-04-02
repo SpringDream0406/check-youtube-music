@@ -4,8 +4,8 @@ import { sendErrorEmail } from "./sendEmail";
 
 console.log("music-check Start", new Date().toLocaleString());
 
-// 매일 15시에 실행
-cron.schedule("0 15 * * *", async () => {
+// 작업 로직을 함수로 분리
+export async function runMusicCheck() {
   console.log("checking", new Date().toLocaleString());
 
   const result = await checkAllMusicData();
@@ -15,4 +15,9 @@ cron.schedule("0 15 * * *", async () => {
     console.log(result);
     sendErrorEmail(result);
   }
+}
+
+// 매일 15시에 실행
+cron.schedule("0 15 * * *", async () => {
+  await runMusicCheck();
 });
