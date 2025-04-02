@@ -1,6 +1,6 @@
 import { runMusicCheck } from "./index";
 
 (async () => {
-  console.log("Manual music-check Start", new Date().toLocaleString());
+  console.log("music-check Run", new Date().toLocaleString());
   await runMusicCheck();
 })();
